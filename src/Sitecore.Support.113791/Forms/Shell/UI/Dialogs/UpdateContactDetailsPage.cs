@@ -1,5 +1,4 @@
-﻿using Sitecore;
-using Sitecore.Forms.Core.Data;
+﻿using Sitecore.Forms.Core.Data;
 using Sitecore.Forms.Core.Data.Helpers;
 using Sitecore.Forms.Shell.UI.Dialogs;
 using Sitecore.Web;
@@ -28,7 +27,7 @@ namespace Sitecore.Support.Forms.Shell.UI.Dialogs
 
         protected string GetFieldsData(string restrictedTypes = "")
         {
-            IEnumerable<string> values = new FormItem(this.CurrentDatabase.GetItem(this.CurrentID)).Fields.Where<IFieldItem>(delegate (IFieldItem property) {
+            IEnumerable<string> values = new FormItem(this.CurrentDatabase.GetItem(this.CurrentID, this.CurrentLanguage)).Fields.Where<IFieldItem>(delegate (IFieldItem property) {
                 if (!string.IsNullOrEmpty(restrictedTypes))
                 {
                     return !restrictedTypes.Contains(property.TypeID.ToString());
@@ -103,6 +102,5 @@ namespace Sitecore.Support.Forms.Shell.UI.Dialogs
                 return WebUtil.GetQueryString("RestrictedFieldTypes", "{1F09D460-200C-4C94-9673-488667FF75D1}|{1AD5CA6E-8A92-49F0-889C-D082F2849FBD}|{7FB270BE-FEFC-49C3-8CB4-947878C099E5}");
             }
         }
-            
     }
 }

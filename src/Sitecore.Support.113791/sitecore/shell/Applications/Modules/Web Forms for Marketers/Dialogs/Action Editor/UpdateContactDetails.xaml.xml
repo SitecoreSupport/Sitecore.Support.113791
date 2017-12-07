@@ -15,11 +15,10 @@
     <x:register assembly="ComponentArt.Web.UI" namespace="ComponentArt.Web.UI" />
     <x:register assembly="Sitecore.Forms.Core" namespace="Sitecore.Forms.Shell.UI.Controls"/>
 
-    <Script type="text/javascript" runat="server" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/jquery-2.1.1.js"/>
-    <Script type="text/javascript" runat="server" Src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/jquery-ui-1.11.1.js"/>
+    <Script type="text/javascript" runat="server" Src="/sitecore/shell/Controls/Lib/jQuery/jquery-1.10.2.min.js"/>
+    <Script type="text/javascript" runat="server" Src="/sitecore/shell/Controls/Lib/jQuery/jQueryUI/1.10.3/jquery-ui-1.10.3.min.js"/>
     <Script type="text/javascript" runat="server" src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/jquery.dynatree-1.2.4.js" />
     <Script type="text/javascript" runat="server" src="/sitecore/shell/Applications/Modules/Web Forms for Marketers/script/sc.controls.js" />
-
 
     <Sitecore.Controls.DialogPage Icon="Business/32x32/businessman_edit.png" runat="server">
 
